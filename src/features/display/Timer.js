@@ -8,11 +8,19 @@ const Timer = ({ inhale, hold, exhale, hold2 }) => {
       setTime([time - 1, interval]);
     } else {
       if (interval === 0) {
-        setTime([hold, 1]);
+        if (hold !== 0) {
+          setTime([hold, 1]);
+        } else {
+          setTime([exhale, 2]);
+        }
       } else if (interval === 1) {
         setTime([exhale, 2]);
       } else if (interval === 2) {
-        setTime([hold2, 3]);
+        if (hold2 !== 0) {
+          setTime([hold2, 3]);
+        } else {
+          setTime([inhale, 0]);
+        }
       } else if (interval === 3) {
         setTime([inhale, 0]);
       }

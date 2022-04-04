@@ -34,13 +34,13 @@ export const selectorSlice = createSlice({
     decrement: (state, action) => {
       switch (action.payload) {
         case 'INHALE':
-          if (state.inhale > 0) state.inhale -= 1;
+          if (state.inhale > 1) state.inhale -= 1;
           break;
         case 'HOLD':
           if (state.hold > 0) state.hold -= 1;
           break;
         case 'EXHALE':
-          if (state.exhale > 0) state.exhale -= 1;
+          if (state.exhale > 1) state.exhale -= 1;
           break;
         case 'HOLD2':
           if (state.hold2 > 0) state.hold2 -= 1;

@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { increment, decrement, selectHold, selectHold2 } from './selectorSlice';
 import { makeInactive } from '../display/displaySlice';
+import styles from '../counter/Counter.module.css';
 
 function Hold({ num }) {
   const hold = useSelector(selectHold);
@@ -12,9 +13,10 @@ function Hold({ num }) {
 
   return (
     <div>
-      <h1>Hold</h1>
-      <div>
+      <h3>Hold</h3>
+      <div className={styles.row}>
         <button
+          className={styles.button}
           aria-label='Decrement value'
           onClick={() => {
             dispatch(makeInactive());
@@ -22,8 +24,9 @@ function Hold({ num }) {
           }}>
           -
         </button>
-        <span>{seconds}</span>
+        <span className={styles.value}>{seconds}</span>
         <button
+          className={styles.button}
           aria-label='Increment value'
           onClick={() => {
             dispatch(makeInactive());

@@ -34,6 +34,24 @@
   background-color: rgba(112, 76, 182, 0.1);
   border-radius: 2px;
   transition: all 0.15s;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.mainButton {
+  font-family: 'Courier New', Courier, monospace;
+  appearance: none;
+  background: none;
+  font-size: 32px;
+  padding-left: 12px;
+  padding-right: 12px;
+  outline: none;
+  border: 2px solid transparent;
+  background-color: rgb(112, 76, 182);
+  padding-bottom: 4px;
+  cursor: pointer;
+  color: white;
+  border-radius: 2px;
+  transition: all 0.15s;
 }
 
 .textbox {
@@ -47,6 +65,10 @@
 .button:hover,
 .button:focus {
   border: 2px solid rgba(112, 76, 182, 0.4);
+}
+
+.mainButton:active {
+  transform: scale(0.95);
 }
 
 .button:active {

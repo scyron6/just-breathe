@@ -7,6 +7,16 @@
   pointer-events: none;
 }
 
+.title {
+  color: rgb(112, 76, 182);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-float infinite 3s ease-in-out;

@@ -8,6 +8,7 @@ import {
   selectHold2,
 } from '../selectors/selectorSlice';
 import { selectActive, switchActive } from './displaySlice';
+import styles from '../counter/Counter.module.css';
 
 export default function Display() {
   const active = useSelector(selectActive);
@@ -20,10 +21,9 @@ export default function Display() {
   return (
     <div style={{ marginTop: '40px' }}>
       <div
+        className={styles.mainButton}
         onClick={() => dispatch(switchActive())}
         style={{
-          backgroundColor: 'blue',
-          color: 'white',
           height: '200px',
           width: '200px',
           borderRadius: '50%',
